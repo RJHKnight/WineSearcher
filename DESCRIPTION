@@ -1,0 +1,16 @@
+Package: WineSearcher
+Type: Package
+Title: Scrape wine prices from a variety of sources.
+Version: 0.1.0
+Author: Richard Knight
+Maintainer: Richard Knight <rjhknight@gmail.com>
+Description: Scrapes wine prices from a variety of web sites, presenting the results in a tidy format.
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+Imports:
+    dplyr,
+    rvest,
+    stringr,
+    tidyr
+RoxygenNote: 6.1.1

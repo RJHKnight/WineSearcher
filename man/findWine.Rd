@@ -2,9 +2,9 @@
 % Please edit documentation in R/WineSearcher.R
 \name{findWine}
 \alias{findWine}
-\title{Find Wine Prices Online}
+\title{Find wine prices online}
 \usage{
-findWine(name, vintage, currency)
+findWine(name, vintage, currency, aggregate = FALSE)
 }
 \arguments{
 \item{name}{The name of the wine}
@@ -12,6 +12,8 @@ findWine(name, vintage, currency)
 \item{vintage}{A vintage to search for}
 
 \item{currency}{The currency to return prices in}
+
+\item{aggregate}{Return a summary of prices by deal type}
 }
 \value{
 A data frame containing the raw prices plus the following fields:
@@ -19,6 +21,7 @@ A data frame containing the raw prices plus the following fields:
   \item{Title}{The parsed name of the wine you are searching for}
   \item{Details}{The merchant description of the product}
   \item{Price}{The raw price of the deal}
+  \item{Type}{The type of deal - single bottle, magnum, case etc}
   \item{NumBottles}{The volume of wine in the deal, expressed as a number of standard bottles (eg. a magnum would be 2)}
   \item{Merchange Name}{The name of the merchant}
   \item{Country}{The coutry of the merchange}
@@ -26,7 +29,7 @@ A data frame containing the raw prices plus the following fields:
 }
 }
 \description{
-Find Wine Prices Online
+Find wine prices online
 }
 \examples{
 findWine("st henri", 2014, "AUD")

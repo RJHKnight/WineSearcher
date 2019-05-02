@@ -65,6 +65,7 @@ getPrices <- function(thisPage) {
       str_detect(Type, CASE_MAGNUM)     ~ 2 * as.numeric(str_extract(Type, "\\d+\\.*\\d*")),
       TRUE                              ~ -1
     )) %>%
+    mutate(Type = if_else(Type == SINGLE_CASE, "Case of 6 Btls", Type)) %>%
     mutate(PricePerBottle = Price / NumBottles) %>%
     select(-IncludesTax, -Link) %>%
     bind_cols(sellerData) %>%

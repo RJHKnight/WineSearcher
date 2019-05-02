@@ -26,9 +26,7 @@ CASE_MAGNUM <- "Case.*Mags"
   )
 
   thisPage <- read_html(thisURL)
-
   Title <- extractTitle(thisPage)
-
   thisPrices <- getPrices(thisPage)
 
   return (cbind(Title, thisPrices))

@@ -1,3 +1,8 @@
+#' @import dplyr
+#' @import rvest
+#' @import stringr
+#' @import tidyr
+
 baseURL <- "https://www.wine-searcher.com/find/"
 noAuctionBit <- "/-/-/u"
 ccyBit <- "?Xsavecurrency=Y&Xcurrencycode="
